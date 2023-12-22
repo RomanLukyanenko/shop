@@ -1,0 +1,394 @@
+:root {
+    --pr: #2985FF;
+    --pr-rgb: 41, 133, 255;
+    --hover-pr: #247ef3;
+    --wh: #fff;
+    --wh-rgb: 255, 255, 255;
+    --gray-rgb: 134, 140, 148;
+    --bdrs: 10px;
+    --bg-2: #1A1D1F;
+}
+
+body.page-admin {
+	font-family: 'Montserrat', sans-serif;
+    background-color: #111315;
+    color: var(--wh);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+	min-height: 400px;
+	position: relative;
+}
+
+
+.btn-light {
+	width: auto;
+    height: auto;
+	min-width: var(--size);
+    min-height: var(--size);
+}
+.btn-primary {
+    --bg: var(--pr);
+	--color: var(--wh);
+    --hover-bg: var(--hover-pr);
+	--hover-color: var(--wh);
+	padding: 0 8px;
+}
+.btn-outline-light {
+	--size: 32px;
+	--bg: rgba(var(--pr-rgb), 0.05);
+	--color: var(--wh);
+    --hover-bg: var(--hover-pr);
+	--hover-color: var(--wh);
+	padding: 0 8px;
+	box-shadow: 0 0 0 2px rgba(var(--gray-rgb), .15);
+}
+.btn-outline-light:hover {
+	box-shadow: 0 0 0 3px rgba(var(--gray-rgb), .45);
+}
+.btn-outline-danger {
+	padding: 0 8px;
+}
+
+button.close {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+button.close:hover,
+button.close {
+    transition: .25s;
+    color: #fff;
+    font-size: 18px;
+}
+button.close:focus,
+button.close:active {
+    border: none;
+    outline: none;
+}
+button.close .icon {
+    top: 6px;
+    right: -10px;
+}
+
+.container {
+    max-width: 830px;
+}
+
+.position-relative {
+	position: relative;
+}
+
+.form-group {
+    --input-h: 45px;
+}
+.form-control {
+    --bg: #272B30;
+    --color: #fff;
+	display: block;
+	width: 100%;
+    height: var(--input-h);
+    background-color: var(--bg);
+    color: var(--color);
+	border: 1px solid var(--bg);
+    font-weight: 600;
+    font-size: calc(var(--input-h) / 3.7);
+    border-radius: var(--bdrs);
+	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	padding: 6px 12px;
+	outline: none;
+}
+.form-control:focus {
+    color: var(--color);
+    background-color: var(--bg);
+    border-color: var(--bg);
+    box-shadow: 0 0 0 4px rgba(var(--pr-rgb), 0.55);
+}
+.form-group--icon .icon {
+    position: absolute;
+    top: 50%;
+    left: calc(var(--input-h) / 2.8);
+    transform: translate(0, -50%);
+    font-size: calc(var(--input-h) / 2.6);
+    color: #888f94;
+}
+.form-group--icon .form-control {
+    padding-left: var(--input-h);
+}
+
+
+
+/* Карточка товару в адмін частині */
+.card-373 {
+    --color-title: #000; 
+    --hover-color-title: var(--color-primary); 
+    --img-bdrs: 14px;
+    --img-min-h: 148px;
+    max-width: 300px;
+	background-color: transparent;
+	border: none;
+	margin-bottom: 20px;
+}
+.card-373 .card-img-hold {
+    position: relative;
+}
+.card-373 .card-img {
+    border-radius: var(--img-bdrs);
+    box-shadow: 0 0 0px 1px rgb(255 255 255 / 7%);
+    min-height: var(--img-min-h);
+	width: 100%;
+	display: block;
+}
+.card-373 .card-img-actions {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--img-bdrs);
+    background-color: hsl(180deg 7.96% 22.16% / 82%);
+    gap: 12px;
+    transition: .4s;
+    opacity: 0;
+}
+.card-373 .card-img-actions:hover {
+    opacity: 1;
+}
+.card-373 .card-img-actions .btn {
+    --btn-size: 34px;
+    width: var(--btn-size);
+    height: var(--btn-size);
+    font-size: 12px;
+    padding: 0;
+}
+.card-373 .badge-publish {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 6px 5px;
+    letter-spacing: .3px;
+}
+.card-373 .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 16px 0 0;
+}
+.card-373 .card-title {
+    display: inline-block;
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.45;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    color: var(--color-title);
+    transition: .25s;
+}
+.card-373 .card-title:hover {
+    color: var(--hover-color-title);
+}
+.card-373 .card-meta {
+    font-size: 11px;
+    font-weight: 500;
+    color: #868C94;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 1;
+    margin: 0;
+}
+.card-373 .card-meta .icon {
+    font-size: 15px;
+}
+.card-373 .badge-price {
+    background-color: #B4E4C9;
+    color: #0d4124;
+    padding: 9px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+/* Вивід контенту на сторінці */
+.box-view-products {
+    padding-top: 30px;
+}
+.box-view-products .box-view-products__title {
+    font-size: 34px;
+    font-weight: 700;
+    margin: 0;
+}
+.box-view-products .box-view-products__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.box-view-products .box-view-products__header-actions {
+    
+}
+.box-view-products .box-view-products__content {
+    border-radius: calc(var(--bdrs) + 8px);
+    background-color: var(--bg-2);
+    padding: 25px 25px 30px;
+    margin-bottom: 50px;
+}
+.box-view-products .box-view-products__content .form-group {
+    --input-h: 52px;
+}
+.box-view-products .box-view-products__content-cards {
+    margin: 30px 0 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 25px;
+}
+.box-view-products .card {
+    --color-title: #fff; 
+    --hover-color-title: var(--pr);
+    width: calc(33% - 15px);
+}
+.box-view-products .card .badge-publish {
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 0.45px;
+    opacity: .75;
+	color: #fff;
+    background-color: #28a745;
+	display: inline-block;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.box-view-products .card .badge-price {
+    padding: 7px;
+    font-size: 12px;
+}
+
+.pagination {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+
+
+
+
+/* Модальне вікно для добавлення товару */
+.fade {
+    transition: opacity .15s linear;
+}
+.modal {
+	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    transform: scale(0);
+    width: 100%;
+    height: 100%;
+    outline: 0;
+	transition: .3s;
+}
+.modal .modal-title {
+	font-size: 20px;
+	font-weight: 500;
+	margin: 0;
+}
+.modal-open {
+	overflow: hidden;
+}
+body::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(19 22 23 / 88%);
+	transition: .3s;
+	opacity: 0;
+}
+body.modal-open::before {
+	opacity: 1;
+	z-index: 9;
+}
+.modal-open .modal {
+	transform: scale(100%);
+}
+.modal-dialog {
+	position: relative;
+    width: auto;
+    margin: 0.5rem;
+	max-width: 500px;
+    margin: 1.75rem auto;
+}
+.modal-dialog .btn-cancel {
+    color: #d06b6b;
+    background-color: rgb(255 255 255 / 5%);
+    border-color: rgb(208 107 107 / 60%);
+    margin-right: 10px;
+    border-color: transparent;
+    background-color: transparent;
+}
+.modal-dialog .btn-cancel:hover {
+    color: #430505;
+    background-color: #d06b6b;
+    border-color: #d06b6b;
+}
+.modal-content {
+    --padding: 30px;
+    background-color: var(--bg-2);
+	position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+	padding: 30px;
+    border: none;
+    border-radius: 10px;
+    outline: 0;
+	box-shadow: 0 0 40px 0 rgb(0 0 0 / 20%), 0 0 0 5px rgba(255, 255, 255, 0.03);
+}
+.modal-content .modal-footer,
+.modal-content .modal-header {
+    border: 0;
+}
+.modal-content .modal-header,
+.modal-content .modal-content,
+.modal-content .modal-footer {
+    padding-bottom: 30px;
+}
+.modal-content .form-control {
+    font-size: 14px;
+	margin-bottom: 15px;
+}
+.modal-content .modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.modal-content .modal-footer {
+	display: flex;
+    justify-content: flex-end;
+	padding-bottom: 0;
+}
+.modal-content .modal-footer .btn-light {
+	--size: 40px;
+	padding: 0 15px;
+}
